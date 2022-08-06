@@ -1,4 +1,0 @@
-baseURL = "https://blog.cseteram.dev"
-languageCode = "ko-kr"
-title = "My New Hugo Site"
-theme = "ananke"
