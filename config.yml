@@ -1,37 +1,44 @@
-baseURL: "https://examplesite.com/"
-title: ExampleSite
+baseURL: "https://blog.cseteram.dev/"
+title: cseteram's blog
 paginate: 5
 theme: PaperMod
+copyright: © 2022 [cseteram](https://github.com/cseteram)
 
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+enableEmoji: true
 
-googleAnalytics: UA-123-45
+# googleAnalytics: UA-123-45
 
 minify:
   disableXML: true
   minifyOutput: true
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
-  author: Me
-  # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 2, 2006"
+  title: cseteram's blog
+  description: "Tech & Hobby blog by cseteram"
+  keywords: [Blog]
+  author: cseteram
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "2006-01-02"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
-  ShowWordCount: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
   disableSpecial1stPost: false
@@ -39,58 +46,44 @@ params:
   comments: false
   hidemeta: false
   hideSummary: false
-  showtoc: false
+  showtoc: true
   tocopen: false
 
   assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
+    disableHLJS: false # to disable highlight.js
+    disableFingerprinting: false
+    # favicon: "<link / abs url>"
+    # favicon16x16: "<link / abs url>"
+    # favicon32x32: "<link / abs url>"
+    # apple_touch_icon: "<link / abs url>"
+    # safari_pinned_tab: "<link / abs url>"
 
   label:
     text: "Home"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
-
-  # profile-mode
-  profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
+  #   icon: /apple-touch-icon.png
+  #   iconHeight: 35
 
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Content: >
+      Researcher.
+      Game Developer.
+      Gamer.
 
   socialIcons:
-    - name: twitter
-      url: "https://twitter.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/cseteram"
+    - name: cv
+      url: "https://cv.cseteram.dev"
+    - name: email
+      url: "mailto:cseteram.dev@gmail.com"
+    - name: Rss
+      url: "index.xml"
 
-  analytics:
-    google:
-      SiteVerificationTag: "XYZabc"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
+  # analytics:
+  #   google:
+  #     SiteVerificationTag: "XYZabc"
 
   cover:
     hidden: true # hide everywhere but not in structured data
@@ -98,7 +91,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/cseteram/blog/tree/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -112,20 +105,26 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
+
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: archives
+      name: Archive
+      url: /archives/
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
+    - identifier: search
+      name: Search
+      url: /search/
       weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
+    - identifier: tags
+      name: Tags
+      url: /tags/
       weight: 30
+    - identifier: cseteram-dev
+      name: csetearm.dev
+      url: https://cseteram.dev
+      weight: 40
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
