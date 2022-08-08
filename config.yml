@@ -74,10 +74,12 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/cseteram"
-    - name: cv
-      url: "https://cv.cseteram.dev"
     - name: email
       url: "mailto:cseteram.dev@gmail.com"
+    - name: keybase
+      url: "https://keybase.io/cseteram"
+    - name: cv
+      url: "https://cv.cseteram.dev"
     - name: Rss
       url: "index.xml"
 
