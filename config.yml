@@ -10,7 +10,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 
-# googleAnalytics: UA-123-45
+googleAnalytics: G-MEEFW5JCFN
 
 minify:
   disableXML: true
@@ -65,7 +65,7 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
+    Title: "Pyeongseok Oh"
     Content: >
       Researcher.
       Game Developer.
@@ -74,10 +74,12 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/cseteram"
-    - name: cv
-      url: "https://cv.cseteram.dev"
     - name: email
       url: "mailto:cseteram.dev@gmail.com"
+    - name: keybase
+      url: "https://keybase.io/cseteram"
+    - name: cv
+      url: "https://cv.cseteram.dev"
     - name: Rss
       url: "index.xml"
 
